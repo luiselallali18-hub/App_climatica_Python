@@ -66,7 +66,7 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-### 4. Ejecutar la aplicación ()
+### 4. Ejecutar la aplicación (en proceso)
 
 ```bash
 python index.py
