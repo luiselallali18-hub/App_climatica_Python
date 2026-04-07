@@ -35,17 +35,3 @@ def obtener_alerta_viento(viento):
         return f"{AMARILLO}ALERTA AMARILLA: Balizas en zonas infantiles y de mayores. {RESET}"
     else:
         return f"{VERDE}Nivel Verde{RESET} (Sin riesgo).{RESET}"
-
-# Pongo float porque la temperatura y el viento pueden tener decimales, y el input devuelve un string, entonces lo convierto a float para poder hacer las comparaciones numéricas.
-try:
-    temperatura = float(input("Introduce la temperatura actual en °C: ")) # Solicitar al operario que ingrese la temperatura actual
-    viento = float(input("Introduce la velocidad del viento en km/h: ")) # Solicitar al usuario que ingrese la velocidad del viento
-
-    print("\n" + "="*50)
-    print("   ESTADO DEL SISTEMA SMART CITY")
-    print("="*50)
-    print(f"Temperatura: {obtener_alerta_temperatura(temperatura)}")
-    print(f"Viento:      {obtener_alerta_viento(viento)}")
-    print("="*50)
-except ValueError:
-    print(f"{ROJO}Error: Por favor, introduce números válidos.{RESET}")
