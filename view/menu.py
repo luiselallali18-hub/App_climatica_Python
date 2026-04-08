@@ -113,14 +113,18 @@ def registrar_datos():
     temperatura = pedir_temperatura()
     humedad = pedir_humedad()
     viento = pedir_viento()
-
+    
+    json = {"fecha": fecha, "zona": zona, "temperatura": temperatura, "humedad": humedad, "viento": viento}
+    
     print("\n✅ Datos introducidos correctamente:")
     print(f"Fecha: {fecha}")
     print(f"Zona: {zona}")
     print(f"Temperatura: {temperatura} ºC")
     print(f"Humedad: {humedad} %")
     print(f"Viento: {viento} km/h")
-
+    
+    guardar_registro(json)
+    
     volver_al_inicio()
 
 
@@ -133,7 +137,7 @@ def consultar_datos():
     zona = pedir_zona()
 
     print(f"\n🔎 Has elegido consultar la zona: {zona}")
-    print("Funcionalidad de consulta en construcción.")
+    print(buscar_por_zona(zona))
 
     volver_al_inicio()
 

@@ -1,0 +1,9 @@
+[
+    {
+        "fecha": "01-02-2026",
+        "zona": "Este",
+        "temperatura": 30.0,
+        "humedad": 20.0,
+        "viento": 12.0
+    }
+]
